@@ -1,0 +1,35 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build RideShare System",
+      "type": "shell",
+      "command": "g++",
+      "args": ["-std=c++14", "-I.", "main.cpp", "-o", "rideshare_system.exe"],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      },
+      "problemMatcher": ["$gcc"]
+    },
+    {
+      "label": "Run RideShare System",
+      "type": "shell",
+      "command": "./rideshare_system.exe",
+      "group": "test",
+      "dependsOn": "Build RideShare System",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      }
+    }
+  ]
+}
